@@ -12,21 +12,21 @@ rawCapture = PiRGBArray(camera,size =(540,380))
 time.sleep(0.1)
 
 # Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("ali1.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+me_image = face_recognition.load_image_file("your_pic.jpg")
+me_face_encoding = face_recognition.face_encodings(me_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-biden_image = face_recognition.load_image_file("biden.jpg")
-biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+some_one_else_image = face_recognition.load_image_file("some_one_else.jpg")
+some_one_else_face_encoding = face_recognition.face_encodings(some_one_else_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    obama_face_encoding,
-    biden_face_encoding
+    me_face_encoding,
+    some_one_else_face_encoding
 ]
 known_face_names = [
-    "alireza",
-    "Joe Biden"
+    "me",
+    "someone else"
 ]
 
 # Initialize some variables
